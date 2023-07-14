@@ -148,127 +148,169 @@ class _MyHomePageState extends State<MyHomePage> {
                  child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                     Image.network(
-                      'https://picsum.photos/250?image=9',
-                      width: 100,
-                      frameBuilder:
-                          (context, child, frame, wasSynchronouslyLoaded) {
-                        return child;
-                      },
-                      loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress == null) {
-                          return child;
-                        } else {
-                          return const Center(
-                            child: CircularProgressIndicator(
-                              color: Colors.blue,
-                            ),
-                          );
-                        }
-                      },
-                    ),
+                     ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                       child: Image.network(
+                        'https://images.unsplash.com/photo-1547041270-d3d54e1263cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JlZWt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
+                        width: 100,
+                        fit: BoxFit.cover,
+                        frameBuilder:
+                            (context, child, frame, wasSynchronouslyLoaded) {
+                          //  if (wasSynchronouslyLoaded) {
+                          //     return child;
+                          //   }
+                        return AnimatedOpacity(
+                          opacity: frame == null ? 0 : 1,
+                          duration: const Duration(seconds: 5000),
+                          curve: Curves.easeOut,
+                          child: child,
+                        );
+        
+         },
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          } else {
+                            return const Center(
+                              child: CircularProgressIndicator(
+                                color: Colors.blue,
+                              ),
+                            );
+                          }
+                        },
+                                         ),
+                     ),
                     SizedBox(
                       width: 12,
                     ),
 
-                     Image.network(
-                         'https://picsum.photos/250?image=9',
-                      width: 100,
-                         frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-                           return child;
-                         },
-                         loadingBuilder: (context, child, loadingProgress) {
-                           if(loadingProgress == null) {
-                            return child;
-                           } else {
-                            return const Center(
-                              child: CircularProgressIndicator(
-                                color: Colors.blue,
-                              ),
-                            );
-                           }
-                         },
-                      ),
+                     ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                       child: Image.network(
+                           'https://plus.unsplash.com/premium_photo-1669638665133-3fec4466ad43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmFsbGV5JTIwb2YlMjBmaXJlfGVufDB8fDB8fHww&w=1000&q=80',
+                           fit: BoxFit.cover,
+                        width: 100,
+                           frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+                             return child;
+                           },
+                           loadingBuilder: (context, child, loadingProgress) {
+                             if(loadingProgress == null) {
+                              return child;
+                             } else {
+                              return const Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.blue,
+                                ),
+                              );
+                             }
+                           },
+                        ),
+                     ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                     ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                       child: Image.network(
+                        'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/05/joseph-barrientos-49318-unsplash-e1558728034701.jpg?resize=1500%2C1000&ssl=1',
+                           fit: BoxFit.cover,
+                        width: 100,
+                           frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+                             return child;
+                           },
+                           loadingBuilder: (context, child, loadingProgress) {
+                             if(loadingProgress == null) {
+                              return child;
+                             } else {
+                              return const Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.blue,
+                                ),
+                              );
+                             }
+                           },
+                        ),
+                     ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                     ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                       child: Image.network(
+                        'https://images.unsplash.com/photo-1536782376847-5c9d14d97cc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+                           fit: BoxFit.cover,
+                        width: 100,
+                           frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+                             return child;
+                           },
+                           loadingBuilder: (context, child, loadingProgress) {
+                             if(loadingProgress == null) {
+                              return child;
+                             } else {
+                              return const Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.blue,
+                                ),
+                              );
+                             }
+                           },
+                        ),
+                     ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                     ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                       child: Image.network(
+                        'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=440&h=220&q=60',
+                           fit: BoxFit.cover,
+                        width: 100,
+                           frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+                             return child;
+                           },
+                           loadingBuilder: (context, child, loadingProgress) {
+                             if(loadingProgress == null) {
+                              return child;
+                             } else {
+                              return const Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.blue,
+                                ),
+                              );
+                             }
+                           },
+                        ),
+                     ),
                     SizedBox(
                       width: 12,
                     ),
 
-                     Image.network(
-                         'https://picsum.photos/250?image=9',
-                      width: 100,
-                         frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-                           return child;
-                         },
-                         loadingBuilder: (context, child, loadingProgress) {
-                           if(loadingProgress == null) {
-                            return child;
-                           } else {
-                            return const Center(
-                              child: CircularProgressIndicator(
-                                color: Colors.blue,
-                              ),
-                            );
-                           }
-                         },
-                      ),
-                    SizedBox(
-                      width: 12,
-                    ),
 
-                     Image.network(
-                         'https://picsum.photos/250?image=9',
-                      width: 100,
-                         frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-                           return child;
-                         },
-                         loadingBuilder: (context, child, loadingProgress) {
-                           if(loadingProgress == null) {
-                            return child;
-                           } else {
-                            return const Center(
-                              child: CircularProgressIndicator(
-                                color: Colors.blue,
-                              ),
-                            );
-                           }
-                         },
-                      ),
-                      SizedBox(
-                      width: 12,
-                    ),
+                   
 
-                    
-                     Image.network(
-                         'https://picsum.photos/250?image=9',
-                      width: 100,
-                         frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-                           return child;
-                         },
-                         loadingBuilder: (context, child, loadingProgress) {
-                           if(loadingProgress == null) {
-                            return child;
-                           } else {
-                            return const Center(
-                              child: CircularProgressIndicator(
-                                color: Colors.blue,
-                              ),
-                            );
-                           }
-                         },
-                      )
-                    
-                  ],
+                  ]
                              ),
-               )
+               ),
+                Image.network(
+                  'https://images.unsplash.com/photo-1547041270-d3d54e1263cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JlZWt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover, frameBuilder:
+                      (context, child, frame, wasSynchronouslyLoaded) {
+                if (wasSynchronouslyLoaded) {
+                  return child;
+                }
+                return AnimatedOpacity(
+                  opacity: frame == null ? 0 : 1,
+                  duration: const Duration(seconds: 1),
+                  curve: Curves.easeOut,
+                  child: child,
+                );
+              })
             ],
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
